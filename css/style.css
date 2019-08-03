@@ -1,0 +1,173 @@
+* {}
+
+.main {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+.main > h2 {
+	text-align: center;
+	margin-top: 5px;
+	font-family: fantasy;
+}
+
+.main .head {
+	width: 100%;
+	height: 50px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-around;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/* toggle background of winnig player */
+.main .head .bg {
+	width: 60px;
+	width: 70px;
+	background-color: #51ff6e;
+	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/* player icons */
+.player {
+	width: 50px;
+	height: 50px;
+	background-color: #dddddd;
+	cursor: pointer;
+	border-radius: 50%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-family: cursive;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* play box */
+.main .box {
+	align-self: center;
+	width: 250px;
+	height: 250px;
+	margin-top: 10px;
+	background-color: #75ff75;
+	border-radius: 10px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 5px 5px;
+	overflow: hidden;
+}
+
+/* 9 square */
+.main .box .square {
+	position: relative;
+	background-color: #f5f4f4;
+	-webkit-transition: background 0.07s;
+	-o-transition: background 0.07s;
+	transition: background 0.07s;
+}
+.main .box .square:hover {
+	background-color: #e2e2e2;
+}
+
+/* cross logo */
+.main .box .square .cross {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.main .box .square .cross .line {
+	width: 115px;
+	height: 4px;
+	background-color: red;
+	-webkit-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
+}
+.main .box .square .cross .line:nth-child(1) {
+	-webkit-transform: rotate(44deg);
+	-ms-transform: rotate(44deg);
+	transform: rotate(44deg);
+}
+.main .box .square .cross .line:nth-child(2) {
+	-webkit-transform: rotate(-44deg);
+	-ms-transform: rotate(-44deg);
+	transform: rotate(-44deg);
+}
+
+/* circle logo */
+.main .box .square .circle {
+	width: 80px;
+	height: 80px;
+}
+.main .box .square .circle .circlein {
+	width: 80px;
+	height: 80px;
+	background-color: transparent;
+	border: 4px red solid;
+	border-radius: 50%;
+}
+
+/* reset button */
+.main #reset {
+	padding: 10px;
+	-ms-flex-item-align: center;
+	align-self: center;
+	margin-top: 20px;
+}
+
+/* toggle background for current player in the players icons */
+.red {
+	background-color: red;
+}
+
+/* toggle bg for match line in play box */
+.match {
+	background-color: #e2e2e2;
+}
+
+
+@media screen and (max-width: 700px) {
+	.head {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+}
