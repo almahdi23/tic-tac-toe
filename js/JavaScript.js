@@ -52,7 +52,7 @@ $(document).ready(function () {
 	};
 	ok()
 
-
+	
 	var l = 1;
 
 	// js reset and css resets function
@@ -104,107 +104,91 @@ $(document).ready(function () {
 		var sqicls = sqi.className
 
 		// cross match
-		switch ("cross") {
-			case (sqacls && sqbcls && sqccls):
-				a();
-				b();
-				c();
-				win("cross")
-				break;
-			case (sqacls && sqecls && sqicls):
-				a();
-				e();
-				i();
-				win("cross")
-				break;
-			case (sqacls && sqdcls && sqgcls):
-				a();
-				d();
-				g();
-				win("cross")
-				break;
-			case (sqccls && sqecls && sqgcls):
-				c();
-				e();
-				g();
-				win("cross")
-				break;
-			case (sqccls && sqfcls && sqicls):
-				c();
-				f();
-				i();
-				win("cross")
-				break;
-			case (sqacls && sqbcls && sqccls):
-				g();
-				h();
-				i();
-				win("cross")
-				break;
-			case (sqdcls && sqecls && sqfcls):
-				d();
-				e();
-				f();
-				win("cross")
-				break;
-			case (sqbcls && sqecls && sqhcls):
-				b();
-				e();
-				h();
-				win("cross")
-				break;
-		}
+		
+
+		if (sqacls == "cross" && sqbcls == "cross" && sqccls == "cross") {
+			a();
+			b();
+			c();
+			win("cross")
+		} else if (sqacls == "cross" && sqecls == "cross" && sqicls == "cross") {
+			a();
+			e();
+			i();
+			win("cross")
+		} else if (sqacls == "cross" && sqdcls == "cross" && sqgcls == "cross") {
+			a();
+			d();
+			g();
+			win("cross")
+		} else if (sqccls == "cross" && sqecls == "cross" && sqgcls == "cross") {
+			c();
+			e();
+			g();
+			win("cross")
+		} else if (sqccls == "cross" && sqfcls == "cross" && sqicls == "cross") {
+			c();
+			f();
+			i();
+			win("cross")
+		} else if (sqgcls == "cross" && sqhcls == "cross" && sqicls == "cross") {
+			g();
+			h();
+			i();
+			win("cross")
+		} else if (sqdcls == "cross" && sqecls == "cross" && sqfcls == "cross") {
+			d();
+			e();
+			f();
+			win("cross")
+		} else if (sqbcls == "cross" && sqecls == "cross" && sqhcls == "cross") {
+			b();
+			e();
+			h();
+			win("cross")
+		};
 
 		// circle match
-		switch ("circle") {
-			case (sqacls && sqbcls && sqccls):
-				a();
-				b();
-				c();
-				win("circle")
-				break;
-			case (sqacls && sqecls && sqicls):
-				a();
-				e();
-				i();
-				win("circle")
-				break;
-			case (sqacls && sqdcls && sqgcls):
-				a();
-				d();
-				g();
-				win("circle")
-				break;
-			case (sqccls && sqecls && sqgcls):
-				c();
-				e();
-				g();
-				win("circle")
-				break;
-			case (sqccls && sqfcls && sqicls):
-				c();
-				f();
-				i();
-				win("circle")
-				break;
-			case (sqgcls && sqhcls && sqicls):
-				g();
-				h();
-				i();
-				win("circle")
-				break;
-			case (sqdcls && sqecls && sqfcls):
-				d();
-				e();
-				f();
-				win("circle")
-				break;
-			case (sqbcls && sqecls && sqhcls):
-				b();
-				e();
-				h();
-				win("circle")
-				break;
+		if (sqacls == "circle" && sqbcls == "circle" && sqccls == "circle") {
+			a();
+			b();
+			c();
+			win("circle")
+		} else if (sqacls == "circle" && sqecls == "circle" && sqicls == "circle") {
+			a();
+			e();
+			i();
+			win("circle")
+		} else if (sqacls == "circle" && sqdcls == "circle" && sqgcls == "circle") {
+			a();
+			d();
+			g();
+			win("circle")
+		} else if (sqccls == "circle" && sqecls == "circle" && sqgcls == "circle") {
+			c();
+			e();
+			g();
+			win("circle")
+		} else if (sqccls == "circle" && sqfcls == "circle" && sqicls == "circle") {
+			c();
+			f();
+			i();
+			win("circle")
+		} else if (sqgcls == "circle" && sqhcls == "circle" && sqicls == "circle") {
+			g();
+			h();
+			i();
+			win("circle")
+		} else if (sqdcls == "circle" && sqecls == "circle" && sqfcls == "circle") {
+			d();
+			e();
+			f();
+			win("circle")
+		} else if (sqbcls == "circle" && sqecls == "circle" && sqhcls == "circle") {
+			b();
+			e();
+			h();
+			win("circle")
 		};
 
 		// check if the match is draw
@@ -270,13 +254,13 @@ $(document).ready(function () {
 			not()
 			setTimeout(function () {
 				alert("Player 1 won , click the reset button to play again");
-			}, 100);
+			},100);
 		} else if (t == "circle") {
 			$("#r").addClass("bg")
 			not()
-			setTimeout(function () {
+			setTimeout(function() {
 				alert("Player 2 won , click the reset button to play again");
-			}, 100);
+			},100);
 		};
 	};
 
