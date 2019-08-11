@@ -105,7 +105,6 @@ $(document).ready(function () {
 
 		// cross match
 		
-
 		if (sqacls == "cross" && sqbcls == "cross" && sqccls == "cross") {
 			a();
 			b();
